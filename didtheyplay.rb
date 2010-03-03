@@ -10,6 +10,8 @@ database_username = settings["mysql_settings"]["username"]
 database_password = settings["mysql_settings"]["password"]
 database_location = settings["mysql_settings"]["server"]
 database_name = settings["mysql_settings"]["database"]
+
+
 # MODEL
 
 #We need mySQL because sqlite3 doesn't support multiple opens of a db, which is lame.

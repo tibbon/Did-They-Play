@@ -69,17 +69,17 @@ end
 
 def sendmail(username, server, activity, time, email)
   username = username.capitalize
-  message = 
-  <<MESSAGE_END
-  From: #{EmailUsername}
-  To: #{email}
-  Subject: #{username} played World of Warcraft.
-  Date: #{Time.now.rfc2822}
-  Seems #{username} played World of Warcraft recently on the #{server} server. 
-  According to server logs #{username} #{activity} around #{time}.
+  
+message = <<MESSAGE_END
+From: #{EmailUsername}
+To: #{email}
+Subject: #{username} played World of Warcraft.
+Date: #{Time.now.rfc2822}
+Seems #{username} played World of Warcraft recently on the #{server} server. 
+According to server logs #{username} #{activity} around #{time}.
 
-  If you wish to no longer recieve these emails, please just email me back and I'll remove you from the database. I haven't built a system yet for easy auto-removal. 
-  MESSAGE_END
+If you wish to no longer recieve these emails, please just email me back and I'll remove you from the database. I haven't built a system yet for easy auto-removal. 
+MESSAGE_END
 
  
   Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
