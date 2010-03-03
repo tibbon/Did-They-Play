@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta charset="utf-8" />
+	 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection" />
+		<title>Did They Play?- <%= @title %></title>
+		
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-12596870-1");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+		
+	</head>
+	
+	<body id="index" class="home">
+		
+		<header id="banner" class="body">
+			<h1><a href="#">Did They Play?</a></h1>
+			<nav>
+				<ul>
+					<li <% if @title == "home" %>
+						<%= @select_class %>
+						<% end %>><a href="http://didtheyplay.com">home</a></li>
+					<li 	<% if @title == "faq" %>
+							<%= @select_class %>
+							<% end %>><a href="/faq">faq</a></li>
+					<li<% if @title == "contact" %>
+						<%= @select_class %>
+						<% end %>><a href="/contact">contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<section id="content" class="body">
+			<%= yield %>
+		</section>
+		
+		
+		<footer id="contentinfo" class="body">
+			<address id="about" class="vcard body">
+				<span class="primary">
+					Share Did They Play
+				</span>
+			</address>
+				<section id="extras" class="body">
+
+						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style">
+						<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=tibbon" class="addthis_button_compact">Share</a>
+						<span class="addthis_separator">|</span>
+						<a class="addthis_button_facebook"></a>
+						<a class="addthis_button_myspace"></a>
+						<a class="addthis_button_google"></a>
+						<a class="addthis_button_twitter"></a>
+						</div>
+						<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=tibbon"></script>
+						<!-- AddThis Button END -->
+
+				</section>
+
+			<!-- /#about -->
+			<p>Licensed as <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons 3.0 BY-SA</a>.</p>
+	
+		
+		
+		
+		<div id="disclaimer">
+		<aside>"Did They Play" is in no way affiliated, owned, or endorsed by <a href="http://us.blizzard.com/en-us/">Blizzard</a> or <a href="http://www.worldofwarcraft.com/index.xml">World of Warcraft</a>. <br />
+			World of Warcraft and all affiliated IP is owned by Blizzard. <br />
+			All information is pulled from the public <a href="http://wowarmory.com/">Wow Armory</a>.<br />
+			We will never ask for your Warcraft/Battle.net account information. <br />
+			Many thanks to the <a href="http://www.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine HTML5 article</a> for code and inspiration.</aside>
+		</div>
+		</footer>
+	</body>
+</html>

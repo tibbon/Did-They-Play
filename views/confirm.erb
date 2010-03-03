@@ -1,0 +1,5 @@
+<p>You've registered alerts for <%= @player_name %>.</p>
+<p>We send out reports each hour. You will only receive a report if they play.</p>
+<p>If is very likely that this player has multiple toons. Would you like to <a href="/">go back and register another alert?</a></p>
+<h4>Most recent activity for <%= @player_name %> on the <%= @server %>:</h4>
+<p><%= @player_name + " " + @activity%> around <%= @activity_time%>.</p>
