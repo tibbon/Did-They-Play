@@ -1,0 +1,19 @@
+Handful of things to do. 
+
+Validate that the user is valid on the server- using Ajax to make the request and see if it works ok. Don't let someone input a user that isn't valid. 
+
+Create a method to allow a user to unsubscribe from the emails easily. Just include a link with the email that sends a post back to the server to remove that email address. Hash it or something so it can't be randomly thrashed to delete everyone. Don't delete from database, but just disable the email. 
+
+Make the cron job work. 
+
+Write some tests. Test the hell out of it. 
+
+Make the HTML layout even better. 
+
+Add links to the code on Github.
+
+Make the footer better. 
+
+Improve the overall style. 
+
+Create a branch that can be used to get email notification of the change of any RSS or Atom feed. 

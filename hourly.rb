@@ -17,22 +17,7 @@ database_name = settings["mysql_settings"]["database"]
 EmailUsername = settings["email_settings"]["username"]
 EmailPassword = settings["email_settings"]["password"]
 
-DB = Sequel.mysql(database_name, 
-                  :user => database_username, 
-                  :password => database_password, 
-                  :host => database_location)
-
-DB.create_table? :player do
-  primary_key :id
-  String  :username
-  String  :server
-  String  :last_activity
-  Time    :last_played
-  String  :email_address
-  #index   [:username, :server], :unique => true
-end
-
-$player_dataset = DB[:player]
+require 'model.rb'
 
 def update_database
   $player_dataset.each do |player|
